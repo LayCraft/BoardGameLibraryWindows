@@ -1,0 +1,18 @@
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\bin\Debug\BoardGameLibrary.exe
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\bin\Debug\BoardGameLibrary.pdb
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.csproj.GenerateResource.Cache
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.exe
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.pdb
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.GameEditorDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.GameManagerDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.csprojResolveAssemblyReference.cache
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.exe
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.pdb
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\bin\Debug\BoardGameLibrary.exe
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\bin\Debug\BoardGameLibrary.pdb
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.csprojResolveAssemblyReference.cache
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.GameEditorDialog.resources
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.GameManagerDialog.resources
+F:\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\BoardGameLibrary.csproj.GenerateResource.Cache
+F:\Dropbox\Visual Studio\BoardGameLibrary\MovieLab\obj\Debug\BoardGameLibrary.exe
+F:\Dropbox\Visual Studio\BoardGameLibrary\MovieLab\obj\Debug\BoardGameLibrary.pdb

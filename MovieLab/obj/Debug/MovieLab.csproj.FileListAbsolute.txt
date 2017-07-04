@@ -1,0 +1,13 @@
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\bin\Debug\MovieLab.exe
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\bin\Debug\MovieLab.pdb
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.NewMovieDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.MovieManagerDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.Directors.EditDirectorDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.Directors.DirectorManagerDialog.resources
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.Properties.Resources.resources
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.csproj.GenerateResource.Cache
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.exe
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.pdb
+C:\Users\Curtis\Dropbox\Visual Studio\MoviesXml\MovieLab\obj\Debug\MovieLab.csprojResolveAssemblyReference.cache
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\MovieLab.exe
+C:\Users\Curtis\Dropbox\Visual Studio\Board Game Library\MovieLab\obj\Debug\MovieLab.pdb

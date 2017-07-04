@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{18BC5B59-A696-4EBA-9866-96C65B30272E}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BoardGameLibrary.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>BoardGameLibrary</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDialogs\OkApplyCancelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDialogs\OkApplyCancelDialog.Designer.cs">
+      <DependentUpon>OkApplyCancelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Base\DomainObject.cs" />
+    <Compile Include="Data\Base\IDomainObject.cs" />
+    <Compile Include="Data\Base\RepositoryBase.cs" />
+    <Compile Include="Data\Model\Game.cs" />
+    <Compile Include="Data\GameRepository.cs" />
+    <Compile Include="GameEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEditorDialog.Designer.cs">
+      <DependentUpon>GameEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameManagerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameManagerDialog.Designer.cs">
+      <DependentUpon>GameManagerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameEditorDialog.resx">
+      <DependentUpon>GameEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameManagerDialog.resx">
+      <DependentUpon>GameManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\SampleData.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

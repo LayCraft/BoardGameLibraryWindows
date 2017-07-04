@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MovieRepository xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Directors>
+    <Person Id="e5507e15-8127-4e5f-baf1-8e36020f73f8">
+      <FirstName>David</FirstName>
+      <LastName>Cronenberg</LastName>
+    </Person>
+    <Person Id="50b018fc-e938-4327-a635-a2c077a6affe">
+      <FirstName>Michael</FirstName>
+      <LastName>Mann</LastName>
+    </Person>
+    <Person Id="5dbc600d-2b85-438b-95cd-5624cf784962">
+      <FirstName>Clint</FirstName>
+      <LastName>Eastwood</LastName>
+    </Person>
+    <Person Id="8005f4bd-d3f5-47d3-a24d-07b4fb741e23">
+      <FirstName>Woody</FirstName>
+      <LastName>Allen</LastName>
+    </Person>
+    <Person Id="a58c80eb-6c98-4ea4-a23d-7de85b8a603d">
+      <FirstName>Sofia</FirstName>
+      <LastName>Coppola</LastName>
+    </Person>
+    <Person Id="9384d08c-de78-4053-9af2-ee9846763330">
+      <FirstName>Sam</FirstName>
+      <LastName>Raimi</LastName>
+    </Person>
+  </Directors>
+  <Movies>
+    <Movie Id="3bf4c13b-0df6-49be-9678-4a3e600a8cf8">
+      <Title>A History of Violence</Title>
+      <Rating>8</Rating>
+      <Description>Tom Stall, a humble family man and owner of a 
+popular neighborhood restaurant, lives a quiet but 
+fulfilling existence in the Midwest. One night Tom 
+foils a crime at his place of business and, to his 
+chagrin, is plastered all over the news for his 
+heroics. Following this, mysterious people follow 
+the Stalls' every move, concerning Tom more than 
+anyone else. As this situation is confronted, more 
+lurks out over where all these occurrences have 
+stemmed from compromising his marriage, family 
+relationship and the main characters' former 
+relations in the process.</Description>
+      <DirectorId>e5507e15-8127-4e5f-baf1-8e36020f73f8</DirectorId>
+    </Movie>
+    <Movie Id="c2dc1266-833d-4edc-82b3-e157f3cadad0">
+      <Title>Heat</Title>
+      <Rating>7</Rating>
+      <Description>Hunters and their prey--Neil and his professional 
+criminal crew hunt to score big money targets 
+(banks, vaults, armored cars) and are, in turn, 
+hunted by Lt. Vincent Hanna and his team of cops 
+in the Robbery/Homicide police division. A botched 
+job puts Hanna onto their trail while they regroup 
+and try to put together one last big 'retirement' 
+score. Neil and Vincent are similar in many ways, 
+including their troubled personal lives. At a 
+crucial moment in his life, Neil disobeys the 
+dictum taught to him long ago by his criminal 
+mentor--'Never have anything in your life that you 
+can't walk out on in thirty seconds flat, if you 
+spot the heat coming around the corner'--as he 
+falls in love. Thus the stage is set for the 
+suspenseful ending....</Description>
+      <DirectorId>50b018fc-e938-4327-a635-a2c077a6affe</DirectorId>
+    </Movie>
+    <Movie Id="44e4b65d-6034-426f-964f-e26ab83e8291">
+      <Title>Lost in Translation</Title>
+      <Rating>8</Rating>
+      <DirectorId>a58c80eb-6c98-4ea4-a23d-7de85b8a603d</DirectorId>
+    </Movie>
+    <Movie Id="63d6427a-301f-44c9-9af5-fd3d1bac5ca5">
+      <Title>Marie Antoinette</Title>
+      <Rating>7</Rating>
+      <Description>Based on Antonia Fraser's book about the ill-fated 
+Archduchess of Austria and later Queen of France, 
+'Marie Antoinette' tells the story of the most 
+misunderstood and abused woman in history, from 
+her birth in Imperial Austria to her later life in 
+France.</Description>
+      <DirectorId>a58c80eb-6c98-4ea4-a23d-7de85b8a603d</DirectorId>
+    </Movie>
+    <Movie Id="b6b70976-bb73-4ea7-b363-ef3d807beb3b">
+      <Title>Match Point</Title>
+      <Rating>8</Rating>
+      <Description>Chris Wilton is a former tennis pro, looking to 
+find work as an instructor. He meets Tom Hewett, a 
+well-off pretty boy. Tom's sister Chloe falls in 
+love with Chris but Chris has his eyes on Tom's 
+fiancée, the luscious Nola. Both Chris and Nola 
+know it's wrong but what could be more right than 
+love? Chris tries to juggle both women but at some 
+point, he must choose between them...</Description>
+      <DirectorId>8005f4bd-d3f5-47d3-a24d-07b4fb741e23</DirectorId>
+    </Movie>
+    <Movie Id="5ced49ce-f94a-49d7-9e20-fd077cc8b8bb">
+      <Title>Spider-Man</Title>
+      <Rating>7</Rating>
+      <Description>On a school field trip, Peter Parker (Maguire) is 
+bitten by a genetically modified spider. He wakes 
+up the next morning with incredible powers. After 
+witnessing the death of his uncle (Robertson), 
+Parkers decides to put his new skills to use in 
+order to rid the city of evil, but someone else 
+has other plans. The Green Goblin (Dafoe) sees 
+Spider-Man as a threat and must dispose of him. 
+Even if it means the Goblin has to target Parker's 
+Aunt (Harris) and the girl he secretly pines for 
+(Dunst) </Description>
+      <DirectorId>9384d08c-de78-4053-9af2-ee9846763330</DirectorId>
+    </Movie>
+    <Movie Id="eaf5ffe8-2c99-4317-b526-5ea89cdb429d">
+      <Title>Unforgiven</Title>
+      <Rating>8</Rating>
+      <Description>The town of Big Whisky is full of normal people 
+trying to lead quiet lives. Cowboys try to make a 
+living. Sheriff 'Little Bill' tries to build a 
+house and keep a heavy-handed order. The town 
+whores just try to get by.Then a couple of cowboys 
+cut up a whore. Unsatisfied with Bill's justice, 
+the prostitutes put a bounty on the cowboys. The 
+bounty attracts a young gun billing himself as 
+'The Schofield Kid', and aging killer William 
+Munny. Munny reformed for his young wife, and has 
+been raising crops and two children in peace. But 
+his wife is gone. Farm life is hard. And Munny is 
+no good at it. So he calls his old partner Ned, 
+saddles his ornery nag, and rides off to kill one 
+more time, blurring the lines between heroism and 
+villainy, man and myth.</Description>
+      <DirectorId>5dbc600d-2b85-438b-95cd-5624cf784962</DirectorId>
+    </Movie>
+  </Movies>
+</MovieRepository>

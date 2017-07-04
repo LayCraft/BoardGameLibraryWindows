@@ -1,0 +1,204 @@
+﻿using System;
+using System.ComponentModel;
+using System.IO;
+using System.Text;
+using System.Windows.Forms;
+using System.Xml.Serialization;
+using MovieLab.Data;
+using MovieLab.Data.Model;
+using MovieLab.Directors;
+
+namespace MovieLab
+{
+    public partial class MovieManagerDialog : Form
+    {
+        private MovieRepository _movieRepository;
+        private readonly BindingSource _bindingSource = new BindingSource();
+        private readonly XmlSerializer _xmlSerializer = new XmlSerializer(typeof(MovieRepository));
+        private readonly string _initialTitle;
+
+        public MovieManagerDialog()
+        {
+            InitializeComponent();
+            _initialTitle = Text;
+        }
+
+        public MovieManagerDialog(MovieRepository movieRepository)
+            : this()
+        {
+            BindSources(movieRepository);
+        }
+
+        private void BindSources(MovieRepository movieRepository)
+        {
+            if (_movieRepository != null)
+                _movieRepository.PropertyChanged -= MovieRepositoryPropertyChanged;
+
+            _bindingSource.DataSource = movieRepository;
+            _bindingSource.DataMember = "Movies";
+
+            _movieListBox.DataSource = _bindingSource;
+            _movieListBox.DisplayMember = "Title";
+
+            _directorComboBox.DataBindings.Clear();
+            _directorComboBox.DataSource = movieRepository.Directors;
+            _directorComboBox.DisplayMember = "FullName";
+            _directorComboBox.DataBindings.Add("SelectedItem", _bindingSource, "Director", true, DataSourceUpdateMode.OnPropertyChanged);
+
+            _ratingTextBox.DataBindings.Clear();
+            _ratingTextBox.DataBindings.Add("Text", _bindingSource, "Rating", true, DataSourceUpdateMode.OnPropertyChanged);
+
+            _descriptionTextBox.DataBindings.Clear();
+            _descriptionTextBox.DataBindings.Add("Text", _bindingSource, "Description", true, DataSourceUpdateMode.OnPropertyChanged);
+
+            movieRepository.PropertyChanged += MovieRepositoryPropertyChanged;
+
+            _movieRepository = movieRepository;
+
+            UpdateButtons();
+        }
+
+        public Movie CurrentMovie
+        {
+            get { return _bindingSource.Current as Movie; }
+        }
+
+        private string _lastFileName;
+        public string LastFileName
+        {
+            get { return _lastFileName; }
+            set
+            {
+                _lastFileName = value;
+                saveToolStripMenuItem.Enabled = string.IsNullOrWhiteSpace(_lastFileName) == false;
+                UpdateTitleBar();
+            }
+        }
+
+        private bool _isModified;
+        public bool IsModified
+        {
+            get { return _isModified; }
+            set
+            {
+                _isModified = value;
+                UpdateTitleBar();
+            }
+        }
+
+        private void OpenFromFile()
+        {
+            MovieRepository movieRepository = null;
+         /*
+           * TODO: The LastFileName property contains the name of the file for opening
+           * Using the _xmlSerializer, Deserialize a new movie repository
+           */
+ 
+            IsModified = false;
+            BindSources(movieRepository);
+        }
+
+        private void SaveToFile()
+        {
+          /*
+           * TODO: The LastFileName property contains the name of the file for saving
+           * Using the _xmlSerializer, Serialize the movie repository to the file.
+           */
+       
+            _movieRepository.IsModified = IsModified = false;
+        }
+
+        private void UpdateTitleBar()
+        {
+            StringBuilder sb = new StringBuilder(_initialTitle);
+            if (string.IsNullOrWhiteSpace(LastFileName) == false)
+                sb.AppendFormat(" - {0}", LastFileName);
+            if (IsModified)
+                sb.Append("*");
+
+            Text = sb.ToString();
+        }
+
+        private void MovieRepositoryPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            IsModified = true;
+        }
+
+        private void UpdateButtons()
+        {
+            _deleteButton.Enabled = CurrentMovie != null;
+        }
+
+        private void MovieManagerDialog_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (IsModified == false || e.CloseReason != CloseReason.UserClosing) return;
+
+            const string msg = "You haven't saved your changes\nDo you still want to quit?";
+            DialogResult res = MessageBox.Show(this, msg, _initialTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            e.Cancel = res == DialogResult.No;
+        }
+
+        #region Click events
+
+        private void _newButton_Click(object sender, EventArgs e)
+        {
+            Movie movie = new Movie();
+            using (NewMovieDialog dlg = new NewMovieDialog(movie))
+            {
+                dlg.StartPosition = FormStartPosition.CenterParent;
+                if (dlg.ShowDialog(this) != DialogResult.OK) return;
+
+                _movieRepository.Add(movie);
+                _bindingSource.Position = _bindingSource.IndexOf(movie);
+                UpdateButtons();
+            }
+        }
+
+        private void _deleteButton_Click(object sender, EventArgs e)
+        {
+            if (CurrentMovie == null) return;
+            _movieRepository.Remove(CurrentMovie);
+            UpdateButtons();
+        }
+
+        private void _directorsButton_Click(object sender, EventArgs e)
+        {
+            DirectorManagerDialog.ManageDirectors(_movieRepository, this);
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IsModified = false;
+            BindSources(new MovieRepository());
+        }
+
+        private void openToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+          //TODO: Use an OpenFileDialog to get a filename from the user, and set the LastFileName property with this filename.
+          OpenFromFile();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveToFile();
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          //TODO: Use a SaveFileDialog to get a filename from the user, and set the LastFileName property with this filename.
+            SaveToFile();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #endregion
+
+    }
+}
